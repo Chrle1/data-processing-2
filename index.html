@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Title goes here</title>
+     <title>Form-Template</title>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
@@ -12,17 +12,42 @@
  </head>
  <body>
      <header>
-     <h1>Title goes here</h1>
+     <h1>Data Processing</h1>
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
-            <a href="#" target="_blank">Name of project goes here</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
      </header>
      
    <main class="wrapper">
-     <div id="output"> Output goes here </div>
+     <div id="output">
       <form method="get" action="" class="main-form">
+        <h1> Widgets </h1>
+        <div id="widgets">
+          <div>
+              <b>Widget</b><br />
+              <p>Our Widgets are spring loaded and need no batteries!</p>
+              <p>At $3.99 they're a bargain!</p>
+              <p><label><input type="checkbox" name="Cart" value="Widget" /> Add to Cart<br /></label></p>
+              <div class="pic"><img src="images/widget.png" /></div>
+          </div>
+          <div>
+              <b>Sprocket</b><br />
+              <p>Our Sprockets are well made and hold up to extreme pressure!</p>
+              <p>They only cost $5.99!</p>
+              <p><label><input type="checkbox" name="Cart" value="Sprocket" /> Add to Cart<br /></label></p>
+              <div class="pic"><img src="images/sprocket.png" /></div>
+          </div>
+          <div>
+              <b>Thingy</b><br />
+              <p>Our Thingys have many uses, and people come up with new ones all the time!</p>
+              <p>Such a deal at $1.99!</p>
+              <p><label><input type="checkbox" name="Cart" value="Thingy" /> Add to Cart<br /></label></p>
+              <div class="pic"><img src="images/thingy.png" /></div>
+          </div>
+      </div>
+
+        <h3>Shippings Information</h3>
           <div>
               <label for="FirstName"> First Name</label> <br />
              <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required="required" autofocus /> 
@@ -40,6 +65,10 @@
              <input type="text" name="Address" id="Address" placeholder="Address" required="required" /> 
           </div>
           <div>
+            <label for="City"> City</label> <br />
+           <input type="text" name="City" id="City" placeholder="City" required="required" /> 
+        </div>
+          <div>
              <label for="State"> State</label> <br />
              <select name="State" id="State" required="required">
                <option value="">Please select state</option>
@@ -51,22 +80,9 @@
              </select>
           </div>
           <div>
-                <fieldset>
-                  <legend>Would you like join our mailing list?</legend>
-                  <label><input type="radio" name="Join_Mailing_List" value="Yes" required="required" /> Yes<br /></label>
-                  <label><input type="radio" name="Join_Mailing_List" value="NO" /> No<br /></label> 
-                </fieldset>
-          </div>
-          <div>
-            <fieldset>
-              <legend>Interested In?</legend>
-              <label><input type="checkbox" name="Interested_In" value="Website" /> Website<br /></label>
-              <label><input type="checkbox" name="Interested_In" value="OnlineCalendar" /> Online Calendar<br /></label>
-              <label><input type="checkbox" name="Interested_In" value="ContactForm" /> Contact Form<br /></label>
-              <label><input type="checkbox" name="Interested_In" value="ComplimentaryLollipops" /> Complimentary lollipops</label> 
-            </fieldset>
-      </div>
-
+            <label for="Postal Code"> Postal Code</label> <br />
+           <input type="text" name="Postal_Code" id="PostalCode" placeholder="Postal Code" required="required" /> 
+        </div>
       <div>
          <label for="Comments"> Comments</label> <br />
           <textarea name="Comments" cols="36" rows="4" id="Comments" ></textarea>
@@ -75,8 +91,15 @@
           <div>
               <input type="submit" value="Submit It" />
           </div>
-       
-     <footer>
+      </form>
+    </div>
+    <footer>
+    <h5>
+      <p>This page demonstrates data processing of query string data using client side JavaScript.</p>
+
+   <p> Upon submission, the cart items are totaled and title case is applied to the Shipping Info.</p>
+    </h5>
+     
       <p><small>&copy; 2021 by 
           Your Name Here, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
