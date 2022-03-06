@@ -1,113 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Form-Template</title>
+     <title>DOM Play</title>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
-  <link rel="stylesheet" href="css/form.css" />
-  <link rel="stylesheet" href="css/data-processing.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <style>
+    /* 
+    div#play span {
+          background-color:yellow;
+    }
+     */ 
+  </style>
  </head>
  <body>
      <header>
-     <h1>Data Processing</h1>
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
+     <h1>DOM Play</h1>
      </header>
-     
+     <p>"Uses Javascript data attributes and a Nodelist to highlight actors in a play by clicking on the name of the actors"
+    </p>
    <main class="wrapper">
-     <div id="output">
-      <form method="get" action="" class="main-form">
-        <h1> Widgets </h1>
-        <div id="widgets">
-          <div>
-              <b>Widget</b><br />
-              <p>Our Widgets are spring loaded and need no batteries!</p>
-              <p>At $3.99 they're a bargain!</p>
-              <p><label><input type="checkbox" name="Cart" value="Widget" /> Add to Cart<br /></label></p>
-              <div class="pic"><img src="images/widget.png" /></div>
-          </div>
-          <div>
-              <b>Sprocket</b><br />
-              <p>Our Sprockets are well made and hold up to extreme pressure!</p>
-              <p>They only cost $5.99!</p>
-              <p><label><input type="checkbox" name="Cart" value="Sprocket" /> Add to Cart<br /></label></p>
-              <div class="pic"><img src="images/sprocket.png" /></div>
-          </div>
-          <div>
-              <b>Thingy</b><br />
-              <p>Our Thingys have many uses, and people come up with new ones all the time!</p>
-              <p>Such a deal at $1.99!</p>
-              <p><label><input type="checkbox" name="Cart" value="Thingy" /> Add to Cart<br /></label></p>
-              <div class="pic"><img src="images/thingy.png" /></div>
-          </div>
-      </div>
-
-        <h3>Shippings Information</h3>
-          <div>
-              <label for="FirstName"> First Name</label> <br />
-             <input type="text" name="First_Name" id="FirstName" placeholder="First Name" required="required" autofocus /> 
-          </div>
-          <div>
-              <label for="LastName"> Last Name</label> <br />
-             <input type="text" name="Last_Name" id="LastName" placeholder="Last Name" required="required" /> 
-          </div>
-          <div>
-              <label for="Email">Email</label> <br />
-              <input type="email" name="Email" id="Email" placeholder="Email" required="required"/> 
-          </div>
-          <div>
-              <label for="Address"> Address</label> <br />
-             <input type="text" name="Address" id="Address" placeholder="Address" required="required" /> 
-          </div>
-          <div>
-            <label for="City"> City</label> <br />
-           <input type="text" name="City" id="City" placeholder="City" required="required" /> 
-        </div>
-          <div>
-             <label for="State"> State</label> <br />
-             <select name="State" id="State" required="required">
-               <option value="">Please select state</option>
-                <option value="AK">Alaska</option>
-                <option value="CA">California</option>
-                <option value="OR">Oregon</option>
-                <option value="WA">Washington</option>
-
-             </select>
-          </div>
-          <div>
-            <label for="Postal Code"> Postal Code</label> <br />
-           <input type="text" name="Postal_Code" id="PostalCode" placeholder="Postal Code" required="required" /> 
-        </div>
-      <div>
-         <label for="Comments"> Comments</label> <br />
-          <textarea name="Comments" cols="36" rows="4" id="Comments" ></textarea>
-      </div>
-
-          <div>
-              <input type="submit" value="Submit It" />
-          </div>
-      </form>
+    <div id="play">
+       <p><span data-actor="Sokka">Sokka: Katara! Do not hit that sphere!</span></p>
+       <p><span data-actor="Zuko">Zuko: Uncle, look!</span></p>
+       <p><span data-actor="Katara">Katara: Is he breathing?</span></p>
+       <p><span data-actor="Sokka">Sokka: Did you see that light shoot into the sky?</span></p>
+       <p><span data-actor="Katara">Katara: What's your name? How did you get here? How did you get in the ice? [The boy turns toward Katara but is too tired to speak.] He's exhausted. [To Sokka.] We need to get him back to the village.</span></p>
+       <p><span data-actor="Sokka">Sokka: [Pokes around Appa, who is still sleeping.] What is this thing? [Appa's tail accidentally lands on top of Sokka.] It's trying to eat me!</span></p>
+       <p><span data-actor="Villager">Villager: Look. See?</span></p>
     </div>
-    <footer>
-    <h5>
-      <p>This page demonstrates data processing of query string data using client side JavaScript.</p>
-
-   <p> Upon submission, the cart items are totaled and title case is applied to the Shipping Info.</p>
-    </h5>
-     
-      <p><small>&copy; 2021 by 
-          Your Name Here, All Rights Reserved ~ 
+     <footer>
+      <p><small>&copy; 2022 by 
+          Charlie Khoy, All Rights Reserved ~ 
           <a id="html-checker" href="#">Check HTML</a> ~ 
           <a id="css-checker" href="#">Check CSS</a></small>
      </p>
     </footer>
   </main>
-  <script src="js/data-processing.js"></script> 
-  <script src="js/main.js"></script> 
+  <script>
+
+      //document.getElementById('hamlet').style.backgroundColor = "yellow";
+      //document.querySelector('span.hamlet').style.backgroundColor = "yellow";
+  </script>
+  <script src="js/main.js"></script>     
  </body>
 </html>
+
